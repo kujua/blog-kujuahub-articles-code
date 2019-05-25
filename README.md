@@ -1,1 +1,1 @@
-# blog-kujuahub-articles-code
+Code for blog post on blog.kujuahub.com
