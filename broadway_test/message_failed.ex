@@ -1,0 +1,1 @@
+Message.failed(updatedmessage, "image processing failed")

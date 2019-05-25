@@ -1,0 +1,1 @@
+acknowledger: {BroadwayTest, :ack_imageprocessor, :ack_data}

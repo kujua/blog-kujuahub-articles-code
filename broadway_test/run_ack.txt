@@ -1,0 +1,19 @@
+ack - successful: [
+  %Broadway.Message{
+    acknowledger: {BroadwayTest, :ack_imageprocessor, :ack_data},
+    batch_key: :default,
+    batcher: :special,
+    data: %ImageProcessingModel{
+      customer_id: "S3R569",
+      destination_type: "png",
+      file_name: "warthog.jpg",
+      file_name_destination: "processed-01",
+      image_type: "jpg",
+      path_from: "assets/",
+      path_to: "assets/",
+      status: :special
+    },
+    status: :ok
+  }
+]
+ack - failed: []

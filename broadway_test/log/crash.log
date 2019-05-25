@@ -1,0 +1,140 @@
+2019-05-22 19:10:57 =ERROR REPORT====
+** Generic server <0.345.0> terminating 
+** Last message in was {inet_async,#Port<0.11>,880,{error,timeout}}
+** When Server state == {state,#Port<0.11>,<0.326.0>,<0.340.0>,{method,rabbit_framing_amqp_0_9_1},{expecting_header,<<>>}}
+** Reason for termination == 
+** {socket_error,timeout}
+2019-05-22 19:10:57 =ERROR REPORT====
+** Generic server <0.344.0> terminating 
+** Last message in was {inet_async,#Port<0.12>,880,{error,timeout}}
+** When Server state == {state,#Port<0.12>,<0.329.0>,<0.341.0>,{method,rabbit_framing_amqp_0_9_1},{expecting_header,<<>>}}
+** Reason for termination == 
+** {socket_error,timeout}
+2019-05-22 19:10:57 =ERROR REPORT====
+** Generic server <0.329.0> terminating 
+** Last message in was {socket_error,timeout}
+** When Server state == {state,amqp_network_connection,{state,#Port<0.12>,<<"client 127.0.0.1:51791 -> 127.0.0.1:5672">>,10,<0.342.0>,131072,<0.328.0>,undefined,false},<0.341.0>,{amqp_params_network,<<"guest">>,<<"guest">>,<<"/">>,"localhost",5672,0,0,10,60000,none,[fun amqp_auth_mechanisms:plain/3,fun amqp_auth_mechanisms:amqplain/3],[],[]},2047,[{<<"capabilities">>,table,[{<<"publisher_confirms">>,bool,true},{<<"exchange_exchange_bindings">>,bool,true},{<<"basic.nack">>,bool,true},{<<"consumer_cancel_notify">>,bool,true},{<<"connection.blocked">>,bool,true},{<<"consumer_priorities">>,bool,true},{<<"authentication_failure_close">>,bool,true},{<<"per_consumer_qos">>,bool,true},{<<"direct_reply_to">>,bool,true}]},{<<"cluster_name">>,longstr,<<"rabbit@Wolfgangs-MacBook-Pro">>},{<<"copyright">>,longstr,<<"Copyright (C) 2007-2019 Pivotal Software, Inc.">>},{<<"information">>,longstr,<<"Licensed under the MPL.  See https://www.rabbitmq.com/">>},{<<"platform">>,longstr,<<"Erlang/OTP 21.3.7">>},{<<"product">>,longstr,<<"RabbitMQ">>},{<<"version">>,longstr,<<"3.7.14">>}],none,false}
+** Reason for termination == 
+** {socket_error,timeout}
+2019-05-22 19:10:57 =ERROR REPORT====
+** Generic server <0.326.0> terminating 
+** Last message in was {socket_error,timeout}
+** When Server state == {state,amqp_network_connection,{state,#Port<0.11>,<<"client 127.0.0.1:51790 -> 127.0.0.1:5672">>,10,<0.343.0>,131072,<0.316.0>,undefined,false},<0.340.0>,{amqp_params_network,<<"guest">>,<<"guest">>,<<"/">>,"localhost",5672,0,0,10,60000,none,[fun amqp_auth_mechanisms:plain/3,fun amqp_auth_mechanisms:amqplain/3],[],[]},2047,[{<<"capabilities">>,table,[{<<"publisher_confirms">>,bool,true},{<<"exchange_exchange_bindings">>,bool,true},{<<"basic.nack">>,bool,true},{<<"consumer_cancel_notify">>,bool,true},{<<"connection.blocked">>,bool,true},{<<"consumer_priorities">>,bool,true},{<<"authentication_failure_close">>,bool,true},{<<"per_consumer_qos">>,bool,true},{<<"direct_reply_to">>,bool,true}]},{<<"cluster_name">>,longstr,<<"rabbit@Wolfgangs-MacBook-Pro">>},{<<"copyright">>,longstr,<<"Copyright (C) 2007-2019 Pivotal Software, Inc.">>},{<<"information">>,longstr,<<"Licensed under the MPL.  See https://www.rabbitmq.com/">>},{<<"platform">>,longstr,<<"Erlang/OTP 21.3.7">>},{<<"product">>,longstr,<<"RabbitMQ">>},{<<"version">>,longstr,<<"3.7.14">>}],none,false}
+** Reason for termination == 
+** {socket_error,timeout}
+2019-05-22 19:10:57 =CRASH REPORT====
+  crasher:
+    initial call: amqp_main_reader:init/1
+    pid: <0.345.0>
+    registered_name: []
+    exception exit: {{socket_error,timeout},[{gen_server,handle_common_reply,8,[{file,"gen_server.erl"},{line,751}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.316.0>,<0.313.0>,amqp_sup,<0.241.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.316.0>]
+    dictionary: [{gen_server_call_timeout,60000},{process_name,{amqp_main_reader,<<"client 127.0.0.1:51790 -> 127.0.0.1:5672">>}}]
+    trap_exit: false
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 68608
+  neighbours:
+2019-05-22 19:10:57 =CRASH REPORT====
+  crasher:
+    initial call: amqp_main_reader:init/1
+    pid: <0.344.0>
+    registered_name: []
+    exception exit: {{socket_error,timeout},[{gen_server,handle_common_reply,8,[{file,"gen_server.erl"},{line,751}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.328.0>,<0.327.0>,amqp_sup,<0.241.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.328.0>]
+    dictionary: [{gen_server_call_timeout,60000},{process_name,{amqp_main_reader,<<"client 127.0.0.1:51791 -> 127.0.0.1:5672">>}}]
+    trap_exit: false
+    status: running
+    heap_size: 2586
+    stack_size: 27
+    reductions: 68520
+  neighbours:
+2019-05-22 19:10:57 =SUPERVISOR REPORT====
+     Supervisor: {<0.316.0>,amqp_connection_type_sup}
+     Context:    child_terminated
+     Reason:     {socket_error,timeout}
+     Offender:   [{pid,<0.345.0>},{name,main_reader},{mfargs,{amqp_main_reader,start_link,[#Port<0.11>,<0.326.0>,<0.340.0>,{method,rabbit_framing_amqp_0_9_1},<<"client 127.0.0.1:51790 -> 127.0.0.1:5672">>]}},{restart_type,transient},{shutdown,30000},{child_type,worker}]
+
+2019-05-22 19:10:57 =SUPERVISOR REPORT====
+     Supervisor: {<0.328.0>,amqp_connection_type_sup}
+     Context:    child_terminated
+     Reason:     {socket_error,timeout}
+     Offender:   [{pid,<0.344.0>},{name,main_reader},{mfargs,{amqp_main_reader,start_link,[#Port<0.12>,<0.329.0>,<0.341.0>,{method,rabbit_framing_amqp_0_9_1},<<"client 127.0.0.1:51791 -> 127.0.0.1:5672">>]}},{restart_type,transient},{shutdown,30000},{child_type,worker}]
+
+2019-05-22 19:10:57 =SUPERVISOR REPORT====
+     Supervisor: {<0.328.0>,amqp_connection_type_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.344.0>},{name,main_reader},{mfargs,{amqp_main_reader,start_link,[#Port<0.12>,<0.329.0>,<0.341.0>,{method,rabbit_framing_amqp_0_9_1},<<"client 127.0.0.1:51791 -> 127.0.0.1:5672">>]}},{restart_type,transient},{shutdown,30000},{child_type,worker}]
+
+2019-05-22 19:10:57 =SUPERVISOR REPORT====
+     Supervisor: {<0.316.0>,amqp_connection_type_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.345.0>},{name,main_reader},{mfargs,{amqp_main_reader,start_link,[#Port<0.11>,<0.326.0>,<0.340.0>,{method,rabbit_framing_amqp_0_9_1},<<"client 127.0.0.1:51790 -> 127.0.0.1:5672">>]}},{restart_type,transient},{shutdown,30000},{child_type,worker}]
+
+2019-05-22 19:10:57 =CRASH REPORT====
+  crasher:
+    initial call: amqp_gen_connection:init/1
+    pid: <0.326.0>
+    registered_name: []
+    exception exit: {{socket_error,timeout},[{gen_server,handle_common_reply,8,[{file,"gen_server.erl"},{line,751}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.313.0>,amqp_sup,<0.241.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.313.0>,#Port<0.11>]
+    dictionary: [{gen_server_call_timeout,60000},{process_name,{amqp_gen_connection,<<"client 127.0.0.1:51790 -> 127.0.0.1:5672">>}}]
+    trap_exit: true
+    status: running
+    heap_size: 4185
+    stack_size: 27
+    reductions: 13987
+  neighbours:
+2019-05-22 19:10:57 =SUPERVISOR REPORT====
+     Supervisor: {<0.313.0>,amqp_connection_sup}
+     Context:    child_terminated
+     Reason:     {socket_error,timeout}
+     Offender:   [{pid,<0.326.0>},{name,connection},{mfargs,{amqp_gen_connection,start_link,[<0.316.0>,{amqp_params_network,<<"guest">>,<<"guest">>,<<"/">>,"localhost",5672,0,0,10,60000,none,[fun amqp_auth_mechanisms:plain/3,fun amqp_auth_mechanisms:amqplain/3],[],[]}]}},{restart_type,intrinsic},{shutdown,brutal_kill},{child_type,worker}]
+
+2019-05-22 19:10:58 =SUPERVISOR REPORT====
+     Supervisor: {<0.313.0>,amqp_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.326.0>},{name,connection},{mfargs,{amqp_gen_connection,start_link,[<0.316.0>,{amqp_params_network,<<"guest">>,<<"guest">>,<<"/">>,"localhost",5672,0,0,10,60000,none,[fun amqp_auth_mechanisms:plain/3,fun amqp_auth_mechanisms:amqplain/3],[],[]}]}},{restart_type,intrinsic},{shutdown,brutal_kill},{child_type,worker}]
+
+2019-05-22 19:10:58 =CRASH REPORT====
+  crasher:
+    initial call: amqp_gen_connection:init/1
+    pid: <0.329.0>
+    registered_name: []
+    exception exit: {{socket_error,timeout},[{gen_server,handle_common_reply,8,[{file,"gen_server.erl"},{line,751}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.327.0>,amqp_sup,<0.241.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.327.0>,#Port<0.12>]
+    dictionary: [{gen_server_call_timeout,60000},{process_name,{amqp_gen_connection,<<"client 127.0.0.1:51791 -> 127.0.0.1:5672">>}}]
+    trap_exit: true
+    status: running
+    heap_size: 4185
+    stack_size: 27
+    reductions: 13938
+  neighbours:
+2019-05-22 19:10:58 =SUPERVISOR REPORT====
+     Supervisor: {<0.327.0>,amqp_connection_sup}
+     Context:    child_terminated
+     Reason:     {socket_error,timeout}
+     Offender:   [{pid,<0.329.0>},{name,connection},{mfargs,{amqp_gen_connection,start_link,[<0.328.0>,{amqp_params_network,<<"guest">>,<<"guest">>,<<"/">>,"localhost",5672,0,0,10,60000,none,[fun amqp_auth_mechanisms:plain/3,fun amqp_auth_mechanisms:amqplain/3],[],[]}]}},{restart_type,intrinsic},{shutdown,brutal_kill},{child_type,worker}]
+
+2019-05-22 19:10:58 =SUPERVISOR REPORT====
+     Supervisor: {<0.327.0>,amqp_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.329.0>},{name,connection},{mfargs,{amqp_gen_connection,start_link,[<0.328.0>,{amqp_params_network,<<"guest">>,<<"guest">>,<<"/">>,"localhost",5672,0,0,10,60000,none,[fun amqp_auth_mechanisms:plain/3,fun amqp_auth_mechanisms:amqplain/3],[],[]}]}},{restart_type,intrinsic},{shutdown,brutal_kill},{child_type,worker}]
+
